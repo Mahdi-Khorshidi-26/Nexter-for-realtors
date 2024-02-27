@@ -46,6 +46,19 @@ body {
   left: 0;
   transition: 0.3s; }
 
+.content__container .header__hero--introduction .supporters__text::after, .content__container .header__hero--introduction .supporters__text::before {
+  content: "";
+  width: 30rem;
+  height: 0.2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  border-radius: 5.1rem;
+  top: 1.2rem; }
+
+.content__container .header__hero--introduction .supporters__logos--logo1, .content__container .header__hero--introduction .supporters__logos--logo2, .content__container .header__hero--introduction .supporters__logos--logo4 {
+  height: 3rem;
+  width: 10rem; }
+
 .btn {
   display: inline-block;
   padding: 1.5rem 2rem;
@@ -139,40 +152,17 @@ body {
           text-align: center;
           font-weight: 500; }
           .content__container .header__hero--introduction .supporters__text::after {
-            content: "";
-            width: 30rem;
-            height: 0.2rem;
-            background-color: rgba(255, 255, 255, 0.6);
-            position: absolute;
-            border-radius: 5.1rem;
-            top: 1.2rem;
             right: 0; }
           .content__container .header__hero--introduction .supporters__text::before {
-            content: "";
-            width: 30rem;
-            height: 0.2rem;
-            background-color: rgba(255, 255, 255, 0.6);
-            position: absolute;
-            border-radius: 5.1rem;
-            top: 1.2rem;
             left: 0; }
         .content__container .header__hero--introduction .supporters__logos {
           width: 100%;
           display: flex;
           justify-content: space-around;
           opacity: 0.8; }
-          .content__container .header__hero--introduction .supporters__logos--logo1 {
-            height: 3rem;
-            width: 10rem; }
-          .content__container .header__hero--introduction .supporters__logos--logo2 {
-            height: 3rem;
-            width: 10rem; }
           .content__container .header__hero--introduction .supporters__logos--logo3 {
             height: 3rem;
             width: 20rem; }
-          .content__container .header__hero--introduction .supporters__logos--logo4 {
-            height: 3rem;
-            width: 10rem; }
     .content__container .header__hero--realtors {
       background-color: #101d2c;
       display: flex;
