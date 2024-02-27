@@ -177,6 +177,11 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10rem;
+        // @include respond(phone) {
+        //   grid-template-columns: 1fr;
+        //   gap: 10rem;
+        //   text-align: center;
+        // }
         &--container {
           .title {
             font-size: 1.9rem;

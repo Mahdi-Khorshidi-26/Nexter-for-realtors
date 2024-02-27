@@ -25,3 +25,7 @@ a:visited {
   display: block;
   margin: 0 auto;
 }
+::selection {
+  background-color: $bg-color-nav;
+  color: white;
+}

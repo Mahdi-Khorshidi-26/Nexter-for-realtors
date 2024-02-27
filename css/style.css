@@ -25,6 +25,10 @@ a:visited {
   display: block;
   margin: 0 auto; }
 
+::selection {
+  background-color: #c69963;
+  color: white; }
+
 @font-face {
   font-family: "roboto";
   src: url("../../assests/fonts/Roboto-Light.ttf"); }
