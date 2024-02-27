@@ -173,6 +173,20 @@
         }
       }
       &__content {
+        padding: 10rem 3rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10rem;
+        &--container {
+          .title {
+            font-size: 1.9rem;
+            color: $heading-color;
+          }
+          .text {
+            font-size: 1.7rem;
+            color: $heading-color-light;
+          }
+        }
       }
     }
     .main {

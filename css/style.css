@@ -20,6 +20,11 @@ a:visited {
   text-decoration: none;
   color: #333; }
 
+.container {
+  max-width: 100rem;
+  display: block;
+  margin: 0 auto; }
+
 @font-face {
   font-family: "roboto";
   src: url("../../assests/fonts/Roboto-Light.ttf"); }
@@ -202,3 +207,14 @@ body {
           .content__container .header__hero--realtors .realtors__info--card .card__info--container .realtor__work {
             font-size: 1rem;
             color: #a3a3a3; }
+  .content__container .header__content {
+    padding: 10rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10rem; }
+    .content__container .header__content--container .title {
+      font-size: 1.9rem;
+      color: #54483a; }
+    .content__container .header__content--container .text {
+      font-size: 1.7rem;
+      color: rgba(84, 72, 58, 0.7); }

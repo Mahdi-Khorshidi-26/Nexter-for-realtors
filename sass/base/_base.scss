@@ -20,3 +20,8 @@ a:visited {
   text-decoration: none;
   color: $link-color;
 }
+.container {
+  max-width: 100rem;
+  display: block;
+  margin: 0 auto;
+}
