@@ -37,7 +37,6 @@
       &__hero {
         display: grid;
         grid-template-columns: 70% 30%;
-        height: 80vh;
         &--introduction {
           background-image: linear-gradient(
               to right bottom,
@@ -95,7 +94,7 @@
               font-weight: 500;
               &::after {
                 content: "";
-                width: 39rem;
+                width: 30rem;
                 height: 0.2rem;
                 background-color: rgba(255, 255, 255, 0.6);
                 position: absolute;
@@ -105,7 +104,7 @@
               }
               &::before {
                 content: "";
-                width: 39rem;
+                width: 30rem;
                 height: 0.2rem;
                 background-color: rgba(255, 255, 255, 0.6);
                 position: absolute;
@@ -140,6 +139,52 @@
         }
         &--realtors {
           background-color: $bg-color-realtors;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          .realtors__title {
+            font-size: 1.5rem;
+            color: $bg-color-nav;
+            text-transform: uppercase;
+          }
+          .realtors__info--card {
+            display: flex;
+            gap: 2.5rem;
+            cursor: pointer;
+            transition: 0.2s;
+            &:hover {
+              transition: 0.2s;
+              transform: translateX(1rem);
+            }
+            &:not(:last-child) {
+              margin-bottom: 4rem;
+            }
+            .card__img--container {
+              width: 7rem;
+              height: 7rem;
+              box-shadow: 0.3rem 0.4rem 0.1rem rgba(0, 0, 0, 0.4);
+              border: none;
+              border-radius: 100%;
+              .card--img {
+                border-radius: 100%;
+              }
+            }
+            .card__info--container {
+              align-self: center;
+              display: flex;
+              flex-direction: column;
+              .realtor__name {
+                font-size: 2rem;
+                color: white;
+              }
+              .realtor__work {
+                font-size: 1rem;
+                color: #a3a3a3;
+              }
+            }
+          }
         }
       }
       &__content {

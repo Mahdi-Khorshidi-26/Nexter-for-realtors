@@ -97,8 +97,7 @@ body {
         top: 1.4rem; }
   .content__container .header__hero {
     display: grid;
-    grid-template-columns: 70% 30%;
-    height: 80vh; }
+    grid-template-columns: 70% 30%; }
     .content__container .header__hero--introduction {
       background-image: linear-gradient(to right bottom, rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.8)), url("../../assests/img/hero.jpeg");
       background-repeat: no-repeat;
@@ -141,20 +140,20 @@ body {
           font-weight: 500; }
           .content__container .header__hero--introduction .supporters__text::after {
             content: "";
-            width: 39rem;
+            width: 30rem;
             height: 0.2rem;
             background-color: rgba(255, 255, 255, 0.6);
             position: absolute;
-            border-radius: 5rem;
+            border-radius: 5.1rem;
             top: 1.2rem;
             right: 0; }
           .content__container .header__hero--introduction .supporters__text::before {
             content: "";
-            width: 39rem;
+            width: 30rem;
             height: 0.2rem;
             background-color: rgba(255, 255, 255, 0.6);
             position: absolute;
-            border-radius: 5rem;
+            border-radius: 5.1rem;
             top: 1.2rem;
             left: 0; }
         .content__container .header__hero--introduction .supporters__logos {
@@ -175,4 +174,41 @@ body {
             height: 3rem;
             width: 10rem; }
     .content__container .header__hero--realtors {
-      background-color: #101d2c; }
+      background-color: #101d2c;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem; }
+      .content__container .header__hero--realtors .realtors__title {
+        font-size: 1.5rem;
+        color: #c69963;
+        text-transform: uppercase; }
+      .content__container .header__hero--realtors .realtors__info--card {
+        display: flex;
+        gap: 2.5rem;
+        cursor: pointer;
+        transition: 0.2s; }
+        .content__container .header__hero--realtors .realtors__info--card:hover {
+          transition: 0.2s;
+          transform: translateX(1rem); }
+        .content__container .header__hero--realtors .realtors__info--card:not(:last-child) {
+          margin-bottom: 4rem; }
+        .content__container .header__hero--realtors .realtors__info--card .card__img--container {
+          width: 7rem;
+          height: 7rem;
+          box-shadow: 0.3rem 0.4rem 0.1rem rgba(0, 0, 0, 0.4);
+          border: none;
+          border-radius: 100%; }
+          .content__container .header__hero--realtors .realtors__info--card .card__img--container .card--img {
+            border-radius: 100%; }
+        .content__container .header__hero--realtors .realtors__info--card .card__info--container {
+          align-self: center;
+          display: flex;
+          flex-direction: column; }
+          .content__container .header__hero--realtors .realtors__info--card .card__info--container .realtor__name {
+            font-size: 2rem;
+            color: white; }
+          .content__container .header__hero--realtors .realtors__info--card .card__info--container .realtor__work {
+            font-size: 1rem;
+            color: #a3a3a3; }
