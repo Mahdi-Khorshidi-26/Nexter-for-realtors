@@ -1,0 +1,207 @@
+.content {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 5% 95%;
+  &__nav {
+    background-color: $bg-color-nav;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover > *,
+    &:hover > *::after,
+    &:hover > *::before {
+      transition: 0.3s;
+      box-shadow: 0.1rem 0.2rem 0.5rem #333;
+    }
+    &--icon {
+      transition: 0.3s;
+      @extend %icon;
+      display: block;
+      margin: 0 auto;
+      margin-top: 4rem;
+      position: fixed;
+      margin-left: 1rem;
+      &::after {
+        @extend %icon;
+        @extend %icon-abi;
+        @include icon-ab(-1.4rem);
+      }
+      &::before {
+        @extend %icon;
+        @extend %icon-abi;
+        @include icon-ab(1.4rem);
+      }
+    }
+  }
+  &__container {
+    .header {
+      &__hero {
+        display: grid;
+        grid-template-columns: 70% 30%;
+        &--introduction {
+          background-image: linear-gradient(
+              to right bottom,
+              rgba(16, 29, 44, 0.93),
+              rgba(16, 29, 44, 0.8)
+            ),
+            url("../../assests/img/hero.jpeg");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          display: grid;
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(3, 1fr);
+          padding: 5rem;
+          .logo__container {
+            height: 3rem;
+            justify-self: center;
+            &--img {
+              width: 13rem;
+            }
+          }
+          .title {
+            margin-left: 5rem;
+            &__container {
+              &--textSub {
+                color: $bg-color-nav;
+                font-size: 2rem;
+              }
+              &--text {
+                font-size: 4rem;
+                color: white;
+                letter-spacing: 0.4rem;
+              }
+              &--btn {
+                .title__btn {
+                  color: white;
+                }
+              }
+            }
+          }
+          .supporters {
+            margin-inline: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+            align-self: end;
+            &__text {
+              font-size: 1.6rem;
+              color: hsla(0, 0%, 100%, 0.8);
+              position: relative;
+              width: 100%;
+              padding: 0 2rem;
+              text-align: center;
+              font-weight: 500;
+              &::after {
+                @extend %supportersAB;
+                right: 0;
+              }
+              &::before {
+                @extend %supportersAB;
+                left: 0;
+              }
+            }
+            &__logos {
+              width: 100%;
+              display: flex;
+              justify-content: space-around;
+              opacity: 0.8;
+              &--logo1 {
+                @extend %logosHW;
+              }
+              &--logo2 {
+                @extend %logosHW;
+              }
+              &--logo3 {
+                height: 3rem;
+                width: 20rem;
+              }
+              &--logo4 {
+                @extend %logosHW;
+              }
+            }
+          }
+        }
+        &--realtors {
+          background-color: $bg-color-realtors;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 2rem;
+          .realtors__title {
+            font-size: 1.5rem;
+            color: $bg-color-nav;
+            text-transform: uppercase;
+          }
+          .realtors__info--card {
+            display: flex;
+            gap: 2.5rem;
+            cursor: pointer;
+            transition: 0.2s;
+            &:hover {
+              transition: 0.2s;
+              transform: translateX(1rem);
+            }
+            &:not(:last-child) {
+              margin-bottom: 4rem;
+            }
+            .card__img--container {
+              width: 7rem;
+              height: 7rem;
+              box-shadow: 0.3rem 0.4rem 0.1rem rgba(0, 0, 0, 0.4);
+              border: none;
+              border-radius: 100%;
+              .card--img {
+                border-radius: 100%;
+              }
+            }
+            .card__info--container {
+              align-self: center;
+              display: flex;
+              flex-direction: column;
+              .realtor__name {
+                font-size: 2rem;
+                color: white;
+              }
+              .realtor__work {
+                font-size: 1rem;
+                color: #a3a3a3;
+              }
+            }
+          }
+        }
+      }
+      &__content {
+        padding: 10rem 3rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10rem;
+        &--container {
+          transition: all 0.3s;
+          cursor: pointer;
+          .title {
+            transition: all 0.3s;
+            font-size: 1.9rem;
+            color: $heading-color;
+          }
+          .text {
+            transition: all 0.3s;
+            font-size: 1.7rem;
+            color: $heading-color-light;
+          }
+          &:hover .text {
+            transition: all 0.3s;
+            font-weight: 700;
+          }
+          &:hover .title {
+            transition: all 0.3s;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
