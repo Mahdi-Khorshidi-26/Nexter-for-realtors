@@ -180,13 +180,25 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 10rem;
         &--container {
+          transition: all 0.3s;
+          cursor: pointer;
           .title {
+            transition: all 0.3s;
             font-size: 1.9rem;
             color: $heading-color;
           }
           .text {
+            transition: all 0.3s;
             font-size: 1.7rem;
             color: $heading-color-light;
+          }
+          &:hover .text {
+            transition: all 0.3s;
+            font-weight: 700;
+          }
+          &:hover .title {
+            transition: all 0.3s;
+            font-size: 2rem;
           }
         }
       }
