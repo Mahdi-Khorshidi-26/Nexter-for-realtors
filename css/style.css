@@ -20,11 +20,6 @@ a:visited {
   text-decoration: none;
   color: #333; }
 
-.container {
-  max-width: 100rem;
-  display: block;
-  margin: 0 auto; }
-
 ::selection {
   background-color: #c69963;
   color: white; }
@@ -44,17 +39,33 @@ body {
   min-height: 100vh;
   box-sizing: border-box; }
 
+.container {
+  max-width: 111rem;
+  display: block;
+  margin: 0 auto;
+  padding: 10rem 3rem; }
+
 .text-sub {
   color: #c69963;
   font-size: 1.8rem;
   font-weight: 700; }
 
 .text-title {
-  font-size: 3.5rem;
+  font-size: 2.7rem;
   letter-spacing: 0.4rem; }
 
 .text-white {
   color: white !important; }
+
+.bg-dark {
+  background-color: #101d2c !important; }
+
+.card {
+  box-shadow: 0.2rem 0.3rem 0.5rem rgba(0, 0, 0, 0.4); }
+  .card .house__card--imgContainer {
+    width: 30rem; }
+  .card .house__card--btnText .btn {
+    text-transform: capitalize; }
 
 .content__nav--icon, .content__nav--icon::after, .content__nav--icon::before {
   width: 4.5rem;
@@ -126,7 +137,7 @@ body {
       margin: 0 auto;
       margin-top: 4rem;
       position: fixed;
-      margin-left: 1.5rem; }
+      margin-left: 1rem; }
       .content__nav--icon::after {
         top: -1.4rem; }
       .content__nav--icon::before {
@@ -137,7 +148,8 @@ body {
     .content__container .header__hero--introduction {
       background-image: linear-gradient(to right bottom, rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.8)), url("../../assests/img/hero.jpeg");
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover;
+      background-position: center;
       background-attachment: fixed;
       display: grid;
       grid-template-columns: 1fr;
@@ -257,7 +269,7 @@ body {
         .main .story__section--left--container1--img1 {
           box-shadow: 0.2rem 0.3rem 0.5rem rgba(0, 0, 0, 0.7); }
       .main .story__section--left--container2 {
-        width: 43rem;
+        width: 38rem;
         position: absolute;
         top: 50%;
         left: 50%; }
@@ -271,3 +283,9 @@ body {
         font-style: italic;
         margin-bottom: 4rem;
         color: rgba(84, 72, 58, 0.7); }
+  .main .house {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 7rem; }

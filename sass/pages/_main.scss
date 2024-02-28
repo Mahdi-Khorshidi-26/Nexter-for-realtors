@@ -25,7 +25,7 @@
         }
       }
       &--container2 {
-        width: 43rem;
+        width: 38rem;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -44,5 +44,12 @@
         color: $heading-color-light;
       }
     }
+  }
+  .house {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-items: center;
+    grid-gap: 7rem;
   }
 }
