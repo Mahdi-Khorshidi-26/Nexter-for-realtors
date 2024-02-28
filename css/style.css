@@ -31,6 +31,18 @@ a:visited {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media (min-width: 160em) {
+    html {
+      font-size: 100%; } }
+  @media (min-width: 49em) and (max-width: 64em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 48em) {
+    html {
+      font-size: 40%; } }
+  @media (min-width: 20em) and (max-width: 47em) {
+    html {
+      font-size: 30%; } }
 
 body {
   font-family: "roboto", sans-serif;
@@ -44,6 +56,9 @@ body {
   display: block;
   margin: 0 auto;
   padding: 10rem 3rem; }
+  @media (min-width: 160em) {
+    .container {
+      max-width: 170rem; } }
 
 .text-sub {
   color: #c69963;
@@ -62,7 +77,6 @@ body {
 
 .card {
   box-shadow: 0.2rem 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
-  height: 45rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -85,6 +99,18 @@ body {
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%); }
+    @media (min-width: 160em) {
+      .card .house__card--btnText {
+        top: 60%;
+        left: 50%; } }
+    @media (max-width: 90em) {
+      .card .house__card--btnText {
+        top: 48%;
+        left: 50%; } }
+    @media (min-width: 20em) and (max-width: 47em) {
+      .card .house__card--btnText {
+        top: 64%;
+        left: 50%; } }
     .card .house__card--btnText .btn {
       text-transform: capitalize; }
   .card .house__card--items {
@@ -98,6 +124,9 @@ body {
     .card .house__card--items--item {
       font-size: 1.6rem;
       color: rgba(84, 72, 58, 0.7); }
+      @media (min-width: 20em) and (max-width: 47em) {
+        .card .house__card--items--item {
+          font-size: 1.8rem; } }
   .card .house__card--btn {
     width: 100%;
     justify-self: end; }
@@ -110,6 +139,9 @@ body {
   height: 0.2rem;
   background-color: #fff;
   border-radius: 1rem; }
+  @media (min-width: 49em) and (max-width: 64em) {
+    .content__nav--icon, .content__nav--icon::after, .content__nav--icon::before {
+      height: 0.3rem; } }
 
 .content__nav--icon::after, .content__nav--icon::before {
   position: absolute;
@@ -125,10 +157,28 @@ body {
   position: absolute;
   border-radius: 5.1rem;
   top: 1.2rem; }
+  @media (min-width: 160em) {
+    .content__container .header__hero--introduction .supporters__text::after, .content__container .header__hero--introduction .supporters__text::before {
+      width: 37rem; } }
+  @media (max-width: 90em) {
+    .content__container .header__hero--introduction .supporters__text::after, .content__container .header__hero--introduction .supporters__text::before {
+      width: 33rem; } }
+  @media (min-width: 49em) and (max-width: 64em) {
+    .content__container .header__hero--introduction .supporters__text::after, .content__container .header__hero--introduction .supporters__text::before {
+      width: 28rem; } }
+  @media (max-width: 48em) {
+    .content__container .header__hero--introduction .supporters__text::after, .content__container .header__hero--introduction .supporters__text::before {
+      width: 25rem; } }
+  @media (min-width: 20em) and (max-width: 47em) {
+    .content__container .header__hero--introduction .supporters__text::after, .content__container .header__hero--introduction .supporters__text::before {
+      width: 22rem; } }
 
 .content__container .header__hero--introduction .supporters__logos--logo1, .content__container .header__hero--introduction .supporters__logos--logo2, .content__container .header__hero--introduction .supporters__logos--logo4 {
   height: 3rem;
   width: 10rem; }
+  @media (min-width: 20em) and (max-width: 47em) {
+    .content__container .header__hero--introduction .supporters__logos--logo1, .content__container .header__hero--introduction .supporters__logos--logo2, .content__container .header__hero--introduction .supporters__logos--logo4 {
+      width: 7rem; } }
 
 .btn {
   display: inline-block;
@@ -146,6 +196,9 @@ body {
   transition: 0.2s;
   margin-top: 0.3rem;
   font-weight: 500; }
+  @media (min-width: 20em) and (max-width: 47em) {
+    .btn {
+      font-size: 2rem; } }
   .btn:hover {
     transition: 0.2s;
     background-color: #ba8e59;
@@ -160,6 +213,9 @@ body {
   height: 100vh;
   display: grid;
   grid-template-columns: 5% 95%; }
+  @media (min-width: 20em) and (max-width: 47em) {
+    .content {
+      grid-template-columns: 1fr; } }
   .content__nav {
     background-color: #c69963;
     cursor: pointer;
@@ -176,6 +232,12 @@ body {
       margin-top: 4rem;
       position: fixed;
       margin-left: 1rem; }
+      @media (max-width: 48em) {
+        .content__nav--icon {
+          margin-left: 0.8rem; } }
+      @media (min-width: 160em) {
+        .content__nav--icon {
+          margin-left: 1.6rem; } }
       .content__nav--icon::after {
         top: -1.4rem; }
       .content__nav--icon::before {
@@ -183,6 +245,9 @@ body {
   .content__container .header__hero {
     display: grid;
     grid-template-columns: 70% 30%; }
+    @media (min-width: 20em) and (max-width: 47em) {
+      .content__container .header__hero {
+        grid-template-columns: 1fr; } }
     .content__container .header__hero--introduction {
       background-image: linear-gradient(to right bottom, rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.8)), url("../../assests/img/hero.jpeg");
       background-repeat: no-repeat;
@@ -193,11 +258,17 @@ body {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
       padding: 5rem; }
+      @media (min-width: 20em) and (max-width: 47em) {
+        .content__container .header__hero--introduction {
+          padding: 7rem 0; } }
       .content__container .header__hero--introduction .logo__container {
         height: 3rem;
         justify-self: center; }
         .content__container .header__hero--introduction .logo__container--img {
           width: 13rem; }
+          @media (min-width: 20em) and (max-width: 47em) {
+            .content__container .header__hero--introduction .logo__container--img {
+              width: 20rem; } }
       .content__container .header__hero--introduction .title {
         margin-left: 5rem; }
         .content__container .header__hero--introduction .title__container--textSub {
@@ -243,10 +314,16 @@ body {
       justify-content: center;
       align-items: center;
       gap: 2rem; }
+      @media (min-width: 20em) and (max-width: 47em) {
+        .content__container .header__hero--realtors {
+          padding: 3rem 5rem; } }
       .content__container .header__hero--realtors .realtors__title {
         font-size: 1.5rem;
         color: #c69963;
         text-transform: uppercase; }
+        @media (min-width: 20em) and (max-width: 47em) {
+          .content__container .header__hero--realtors .realtors__title {
+            font-size: 1.8rem; } }
       .content__container .header__hero--realtors .realtors__info--card {
         display: flex;
         gap: 2.5rem;
@@ -263,6 +340,10 @@ body {
           box-shadow: 0.3rem 0.4rem 0.1rem rgba(0, 0, 0, 0.4);
           border: none;
           border-radius: 100%; }
+          @media (min-width: 20em) and (max-width: 47em) {
+            .content__container .header__hero--realtors .realtors__info--card .card__img--container {
+              width: 10rem;
+              height: 10rem; } }
           .content__container .header__hero--realtors .realtors__info--card .card__img--container .card--img {
             border-radius: 100%; }
         .content__container .header__hero--realtors .realtors__info--card .card__info--container {
@@ -272,14 +353,31 @@ body {
           .content__container .header__hero--realtors .realtors__info--card .card__info--container .realtor__name {
             font-size: 2rem;
             color: white; }
+            @media (min-width: 20em) and (max-width: 47em) {
+              .content__container .header__hero--realtors .realtors__info--card .card__info--container .realtor__name {
+                font-size: 2.5rem; } }
           .content__container .header__hero--realtors .realtors__info--card .card__info--container .realtor__work {
             font-size: 1rem;
             color: #a3a3a3; }
+            @media (min-width: 20em) and (max-width: 47em) {
+              .content__container .header__hero--realtors .realtors__info--card .card__info--container .realtor__work {
+                font-size: 2rem; } }
   .content__container .header__content {
     padding: 10rem 3rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 10rem; }
+    grid-gap: 10rem; }
+    @media (max-width: 48em) {
+      .content__container .header__content {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5rem; } }
+    @media (min-width: 20em) and (max-width: 47em) {
+      .content__container .header__content {
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        padding: 8rem 10rem; } }
     .content__container .header__content--container {
       transition: all 0.3s;
       cursor: pointer; }
@@ -287,10 +385,16 @@ body {
         transition: all 0.3s;
         font-size: 1.9rem;
         color: #54483a; }
+        @media (min-width: 20em) and (max-width: 47em) {
+          .content__container .header__content--container .title {
+            font-size: 2.6rem; } }
       .content__container .header__content--container .text {
         transition: all 0.3s;
         font-size: 1.7rem;
         color: rgba(84, 72, 58, 0.7); }
+        @media (min-width: 20em) and (max-width: 47em) {
+          .content__container .header__content--container .text {
+            font-size: 2.3rem; } }
       .content__container .header__content--container:hover .text {
         transition: all 0.3s;
         font-weight: 700; }
@@ -303,6 +407,9 @@ body {
   .main .story {
     display: grid;
     grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 20em) and (max-width: 47em) {
+      .main .story {
+        grid-template-columns: 1fr; } }
     .main .story__section--left {
       background-image: linear-gradient(to right bottom, rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url("../../assests/img/back.jpg");
       background-repeat: no-repeat;
@@ -322,22 +429,37 @@ body {
         position: absolute;
         top: 50%;
         left: 50%; }
+        @media (min-width: 160em) {
+          .main .story__section--left--container2 {
+            width: 42rem; } }
     .main .story__section--right {
       padding: 12rem;
       background-color: #f9f7f6; }
       .main .story__section--right--title {
         color: #54483a; }
+        @media (min-width: 160em) {
+          .main .story__section--right--title {
+            font-size: 3.5rem; } }
       .main .story__section--right--explanation {
         font-size: 1.5rem;
         font-style: italic;
         margin-bottom: 4rem;
         color: rgba(84, 72, 58, 0.7); }
+        @media (min-width: 160em) {
+          .main .story__section--right--explanation {
+            font-size: 1.9rem; } }
   .main .house {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-items: center;
     grid-gap: 7rem; }
+    @media (min-width: 160em) {
+      .main .house {
+        grid-gap: 3rem; } }
+    @media (min-width: 20em) and (max-width: 47em) {
+      .main .house {
+        grid-template-columns: 1fr; } }
   .main .gallery {
     background-color: #f9f7f6;
     display: grid;
@@ -346,6 +468,14 @@ body {
     padding: 2rem;
     grid-gap: 1rem;
     min-height: 60rem; }
+    @media (min-width: 160em) {
+      .main .gallery {
+        grid-template-rows: repeat(7, 13vh);
+        min-height: 65rem; } }
+    @media (max-width: 90em) {
+      .main .gallery {
+        grid-template-rows: repeat(7, 13vh);
+        min-height: 65rem; } }
     .main .gallery__imgContainer {
       overflow: hidden;
       cursor: pointer;
@@ -421,6 +551,9 @@ body {
       grid-gap: 4rem;
       text-align: center;
       align-items: center; }
+      @media (min-width: 20em) and (max-width: 47em) {
+        .footer .container .footer__menu {
+          grid-template-columns: repeat(2, 1fr); } }
       .footer .container .footer__menu--item {
         cursor: pointer;
         font-size: 1.4rem;
@@ -435,8 +568,11 @@ body {
       font-size: 1.4rem;
       color: #aaa;
       padding-inline: 5rem; }
+      @media (min-width: 20em) and (max-width: 47em) {
+        .footer .container .footer__copyright {
+          font-size: 2rem; } }
       .footer .container .footer__copyright .name {
-        font-size: 1.7;
+        font-size: 2rem;
         font-weight: 700;
         color: #fff;
         transition: all 0.2s; }

@@ -1,3 +1,5 @@
+//abstracts
+@import "abstracts/mixins";
 // abstracts
 @import "abstracts/variables";
 // base
@@ -6,7 +8,6 @@
 @import "base/utilities";
 // abstracts
 @import "abstracts/functions";
-@import "abstracts/mixins";
 @import "abstracts/inheritence";
 //components
 @import "components/buttons";

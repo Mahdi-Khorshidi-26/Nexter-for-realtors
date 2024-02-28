@@ -3,6 +3,9 @@
   height: 0.2rem;
   background-color: #fff;
   border-radius: 1rem;
+  @include respond(laptop) {
+    height: 0.3rem;
+  }
 }
 %icon-abi {
   //icon after before inherit
@@ -19,8 +22,26 @@
   position: absolute;
   border-radius: 5.1rem;
   top: 1.2rem;
+  @include respond(big-screen) {
+    width: 37rem;
+  }
+  @include respond(laptop-large) {
+    width: 33rem;
+  }
+  @include respond(laptop) {
+    width: 28rem;
+  }
+  @include respond(tablet) {
+    width: 25rem;
+  }
+  @include respond(mobile) {
+    width: 22rem;
+  }
 }
 %logosHW {
   height: 3rem;
   width: 10rem;
+  @include respond(mobile) {
+    width: 7rem;
+  }
 }

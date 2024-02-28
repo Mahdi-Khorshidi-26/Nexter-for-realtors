@@ -3,6 +3,9 @@
   display: block;
   margin: 0 auto;
   padding: $default-padding;
+  @include respond(big-screen) {
+    max-width: 170rem;
+  }
 }
 .text-sub {
   color: $bg-color-nav;
@@ -21,7 +24,6 @@
 }
 .card {
   box-shadow: 0.2rem 0.3rem 0.5rem rgba(0, 0, 0, 0.4);
-  height: 45rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -47,6 +49,18 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
+    @include respond(big-screen) {
+      top: 60%;
+      left: 50%;
+    }
+    @include respond(laptop-large) {
+      top: 48%;
+      left: 50%;
+    }
+    @include respond(mobile) {
+      top: 64%;
+      left: 50%;
+    }
     .btn {
       text-transform: capitalize;
     }
@@ -59,9 +73,13 @@
     grid-gap: 4rem;
     text-align: center;
     margin-top: 2.5rem;
+
     &--item {
       font-size: 1.6rem;
       color: $heading-color-light;
+      @include respond(mobile) {
+        font-size: 1.8rem;
+      }
     }
   }
   .house__card--btn {

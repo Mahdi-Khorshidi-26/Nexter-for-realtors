@@ -11,6 +11,9 @@
       grid-gap: 4rem;
       text-align: center;
       align-items: center;
+      @include respond(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+      }
       &--item {
         cursor: pointer;
         font-size: 1.4rem;
@@ -31,8 +34,11 @@
       font-size: 1.4rem;
       color: #aaa;
       padding-inline: 5rem;
+      @include respond(mobile) {
+        font-size: 2rem;
+      }
       .name {
-        font-size: 1.7;
+        font-size: 2rem;
         font-weight: 700;
         color: #fff;
         transition: all 0.2s;

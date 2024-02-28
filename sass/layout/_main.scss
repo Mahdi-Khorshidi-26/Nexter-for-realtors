@@ -3,6 +3,9 @@
   .story {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    @include respond(mobile) {
+      grid-template-columns: 1fr;
+    }
     &__section--left {
       background-image: linear-gradient(
           to right bottom,
@@ -20,6 +23,7 @@
       &--container1 {
         width: 50rem;
         position: relative;
+
         &--img1 {
           box-shadow: 0.2rem 0.3rem 0.5rem rgba(0, 0, 0, 0.7);
         }
@@ -29,6 +33,9 @@
         position: absolute;
         top: 50%;
         left: 50%;
+        @include respond(big-screen) {
+          width: 42rem;
+        }
       }
     }
     &__section--right {
@@ -36,12 +43,18 @@
       background-color: $bg-main;
       &--title {
         color: $heading-color;
+        @include respond(big-screen) {
+          font-size: 3.5rem;
+        }
       }
       &--explanation {
         font-size: 1.5rem;
         font-style: italic;
         margin-bottom: 4rem;
         color: $heading-color-light;
+        @include respond(big-screen) {
+          font-size: 1.9rem;
+        }
       }
     }
   }
@@ -51,6 +64,12 @@
     align-items: center;
     justify-items: center;
     grid-gap: 7rem;
+    @include respond(big-screen) {
+      grid-gap: 3rem;
+    }
+    @include respond(mobile) {
+      grid-template-columns: 1fr;
+    }
   }
   .gallery {
     background-color: $bg-main;
@@ -60,6 +79,14 @@
     padding: 2rem;
     grid-gap: 1rem;
     min-height: 60rem;
+    @include respond(big-screen) {
+      grid-template-rows: repeat(7, 13vh);
+      min-height: 65rem;
+    }
+    @include respond(laptop-large) {
+      grid-template-rows: repeat(7, 13vh);
+      min-height: 65rem;
+    }
     &__imgContainer {
       overflow: hidden;
       cursor: pointer;
