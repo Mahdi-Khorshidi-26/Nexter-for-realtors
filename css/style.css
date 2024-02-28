@@ -53,6 +53,9 @@ body {
   font-size: 3.5rem;
   letter-spacing: 0.4rem; }
 
+.text-white {
+  color: white !important; }
+
 .content__nav--icon, .content__nav--icon::after, .content__nav--icon::before {
   width: 4.5rem;
   height: 0.2rem;
@@ -122,7 +125,8 @@ body {
       display: block;
       margin: 0 auto;
       margin-top: 4rem;
-      position: relative; }
+      position: fixed;
+      margin-left: 1.5rem; }
       .content__nav--icon::after {
         top: -1.4rem; }
       .content__nav--icon::before {
@@ -241,9 +245,8 @@ body {
     .main .story__section--left {
       background-image: linear-gradient(to right bottom, rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url("../../assests/img/back.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
       background-attachment: fixed;
+      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -268,5 +271,3 @@ body {
         font-style: italic;
         margin-bottom: 4rem;
         color: rgba(84, 72, 58, 0.7); }
-      .main .story__section--right .title__btn {
-        color: white; }

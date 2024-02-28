@@ -11,9 +11,8 @@
         ),
         url("../../assests/img/back.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
       background-attachment: fixed;
+      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -43,9 +42,6 @@
         font-style: italic;
         margin-bottom: 4rem;
         color: $heading-color-light;
-      }
-      .title__btn {
-        color: white;
       }
     }
   }
