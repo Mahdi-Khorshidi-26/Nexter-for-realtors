@@ -65,6 +65,7 @@
       cursor: pointer;
       height: 100%;
       width: 100%;
+      transition: all 0.15s;
       &--img {
         height: 100%;
         width: 100%;
@@ -75,6 +76,11 @@
       &:hover > * {
         transition: all 0.4s;
         transform: scale(1.5);
+      }
+      &:hover {
+        transition: all 0.3s;
+        box-shadow: 0.2rem 0.4rem 4rem rgba(0, 0, 0, 0.7);
+        border-radius: 0.5rem;
       }
     }
     .gal-item1 {
